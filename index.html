@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyebin Lee</title>
+  <meta name="description" content="Selected works 2021—26">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- 첫 페인트 전 테마 적용 (깜빡임 방지) -->
+  <script>
+    (function () {
+      var s = localStorage.getItem("theme");
+      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ===== 고정 헤더 ===== -->
+    <div class="site-header">
+
+      <nav class="seg-nav" data-active="work" aria-label="주 메뉴">
+        <div class="seg-nav__bg"></div>
+        <div class="seg-nav__track"><span class="seg-nav__pill"></span></div>
+        <div class="seg-nav__links">
+          <a class="seg-nav__link is-active" href="index.html" aria-current="page"><span>Work</span></a>
+          <a class="seg-nav__link" href="info.html"><span>About</span></a>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <!-- ===== 히어로 ===== -->
+      <section class="hero" aria-label="Intro">
+        <header class="hero__inner">
+          <h1 class="hero__title reveal" style="--delay:.05s">
+            <span class="rotator" data-rotator>一些精选</span>
+          </h1>
+          <p class="hero__sub reveal" style="--delay:.2s">2021—26</p>
+        </header>
+      </section>
+
+      <section></section>
+
+      <!-- ===== 프로젝트 갤러리 (script.js의 PROJECTS로 렌더) ===== -->
+      <section class="gallery-section" aria-label="Project Gallery">
+        <span class="sr-only">프로젝트 갤러리입니다.</span>
+        <div class="gallery" aria-label="Gallery" data-gallery></div>
+      </section>
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="site-footer">
+      <div class="site-footer__theme">
+        <button type="button" class="theme-btn" aria-label="테마 전환 버튼" data-theme-toggle>
+          <span class="sr-only">테마를 전환합니다.</span>
+          <span class="theme-btn__icon theme-btn__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+          </span>
+          <span class="theme-btn__icon theme-btn__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z"/></svg>
+          </span>
+        </button>
+      </div>
+      <div class="site-footer__copy">
+        <p>© 2026 Hyebin Lee. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

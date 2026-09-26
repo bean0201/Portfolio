@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SK Telecom T Universe UX·UI Build — Hyebin Lee</title>
+  <meta name="description" content="Subscription Commerce SK Telecom T-Universe · SK Telecom · 2022. 12 – 2023. 12">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detail.css">
+  <script>
+    (function () {
+      var s = localStorage.getItem("theme");
+      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body class="detail-page">
+  <div class="shell">
+
+    <!-- ===== 고정 헤더 ===== -->
+    <div class="site-header">
+<a class="theme-btn back-btn" href="index.html" aria-label="Work 페이지로 돌아가기">
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+        <span>Back</span>
+      </a>
+
+      <nav class="seg-nav" data-active="work" aria-label="주 메뉴">
+        <div class="seg-nav__bg"></div>
+        <div class="seg-nav__track"><span class="seg-nav__pill"></span></div>
+        <div class="seg-nav__links">
+          <a class="seg-nav__link is-active" href="index.html" aria-current="page"><span>Work</span></a>
+          <a class="seg-nav__link" href="info.html"><span>About</span></a>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- ===== 히어로: 이미지 비율 그대로 풀블리드 + 날짜/제목 ===== -->
+    <figure class="detail-hero">
+      <div class="detail-hero__media">
+        <img src="images/t-universe/t-universe-hero.png" alt="SK Telecom T Universe UX·UI Build" width="1920" height="1000" fetchpriority="high" decoding="async">
+      </div>
+      <header class="detail-hero__header reveal" style="--delay:.1s">
+        <p class="detail-hero__date">2022. 12 – 2023. 12 · SK Telecom</p>
+        <hgroup>
+          <h1 class="detail-hero__title">SK Telecom T Universe UX·UI Build</h1>
+          <p class="detail-hero__subtitle">Subscription Commerce SK Telecom T-Universe</p>
+        </hgroup>
+      </header>
+    </figure>
+
+    <!-- ===== 본문: 포트폴리오 페이지 단위 블록 (이미지 + 본문) ===== -->
+    <main class="detail-main">
+      <article class="detail-article">
+
+      <section>
+        <dl class="detail-meta">
+            <div class="detail-meta__item"><dt>작업 목적</dt><dd>기존 서비스 개선 제안, 구축 및 운영</dd></div>
+            <div class="detail-meta__item"><dt>작업 기간</dt><dd>2022년 12월 – 2023년 12월 (1년)</dd></div>
+            <div class="detail-meta__item"><dt>참여 인원</dt><dd>UXUI 9명 · UX 기여도 20% · UI 기여도 30%</dd></div>
+            <div class="detail-meta__item"><dt>주요 역할</dt><dd>리서치, UXUI 전략 및 컨셉 도출, 인터페이스 디자인, 디자인 시스템 구축, FE 개발 대응, 배포 QA</dd></div>
+            <div class="detail-meta__item"><dt>작업 툴</dt><dd>Figma, Midjourney, Google Sheets, Slack, Jira, Confluence</dd></div>
+            <div class="detail-meta__item"><dt>수상</dt><dd>German Design Award 2025 Winner · Excellent Communications Design</dd></div>
+        </dl>
+      </section>
+
+      <!-- ── Page 01 · 포트폴리오 p.18 ── -->
+      <section class="detail-block" id="page-01">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Background</p>
+          <h2>비통신 분야에서 ‘플랫폼’이 되려는 SKT의 새로운 ‘조합’ 구독 서비스 등장</h2>
+            <p>T 우주는 요금제와 멤버십 혜택 안에서 소개되며 독립적인 구독 서비스로 인식되기 어려웠습니다. 이 프로젝트는 기존 혜택과 분리된 동선에서 T 우주의 구독 가치를 이해하고 체감하는 경험을 만드는 데서 시작되었습니다.</p>
+            <p>단일 구독 중심에서 여러 구독을 한 서비스에서 이용하는 구조로 변화하는 가운데, T 우주 구독 상품은 통신 요금제와 결합된 형태로 사용 활성화가 저조하고 이해도가 낮은 편이었습니다. 요금제에 포함되어 있지만 사용하지 않는 비율이 49.6%였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-01.png" alt="비통신 분야에서 ‘플랫폼’이 되려는 SKT의 새로운 ‘조합’ 구독 서비스 등장" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 01 · 01 · Background"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-01.png · 포트폴리오 p.18</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 02 · 포트폴리오 p.19 ── -->
+      <section class="detail-block" id="page-02">
+        <div class="detail-text">
+          <p class="detail-eyebrow">User Research</p>
+          <h2>T 우주 사용자는 상품 탐색 단계와 혜택 사용 단계에서 어려움을 겪습니다</h2>
+            <p>T 우주 사용자와 타사 사용자 총 6명을 대상으로 과업 기반 인터페이스 문제점을 파악하는 UT를 진행했습니다. 구독 상품 사용은 가장 어려운 태스크였고, 개별 태스크에서 평균 이상의 시간이 소요되었으며 참가자 6명 모두 구독 상품 사용에 실패했습니다.</p>
+            <p>인터뷰에서는 "T 우주가 무엇인지 모르겠어요", "상품이 광고처럼 느껴져요", "가입 개념이 낯설고 필수 정보를 인지하기 어려워요", "읽어야 하는 단계가 너무 많아요"처럼 상품 이해와 이용 난이도가 높다는 의견이 반복되었습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-02.png" alt="T 우주 사용자는 상품 탐색 단계와 혜택 사용 단계에서 어려움을 겪습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 02 · 02 · User Research"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-02.png · 포트폴리오 p.19</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 03 · 포트폴리오 p.20 ── -->
+      <section class="detail-block" id="page-03">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem Definition</p>
+          <h2>무엇을 구독하는지 잘 이해하지 못하고 가입 후에도 혜택을 사용하기 어려웠습니다</h2>
+            <p>T 우주의 상품 이미지는 상품을 이해하는 데 큰 도움이 되지 못합니다. 또한 사용자에게 필요한 기능이 깊은 뎁스 안에 구성되어 있어 해지까지 이어지는 불편함을 줍니다.</p>
+            <p>무엇을 구독하고 어떻게 이용하는지 불명확해 탐색 과정에서 이탈하는 ‘구독 상품 정보 파악 실패’와, 상품 이용과 관리 기능이 깊은 구조에 위치해 쉽게 찾지 못하는 ‘구독 혜택 사용과 관리의 복잡성’ 두 가지 문제로 정의했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-03.png" alt="무엇을 구독하는지 잘 이해하지 못하고 가입 후에도 혜택을 사용하기 어려웠습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#ff6b5e,#ffd9d3)" data-label="Page 03 · 03 · Problem Definition"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-03.png · 포트폴리오 p.20</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 04 · 포트폴리오 p.21 ── -->
+      <section class="detail-block" id="page-04">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution Summary</p>
+          <h2>T 우주만의 정체성이 담긴 서비스 속에서 직관적인 상품 탐색 및 사용 여정을 제공합니다</h2>
+            <p>상품 구조를 쉽게 이해할 수 있도록 T 우주의 구독 구조를 한눈에 시각화하고, 상품의 구조를 순서대로 이해할 수 있게 하며, 상품을 고르고 담는 과정을 익숙한 커머스 흐름으로 구성했습니다.</p>
+            <p>이용과 관리의 경험이 구분되도록 혜택 사용 진입점의 접근성을 높이고, 현재 가입 상태를 중심으로 구독을 관리하도록 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-04.png" alt="T 우주만의 정체성이 담긴 서비스 속에서 직관적인 상품 탐색 및 사용 여정을 제공합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 04 · 04 · Solution Summary"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-04.png · 포트폴리오 p.21</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 05 · 포트폴리오 p.22 ── -->
+      <section class="detail-block" id="page-05">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem · 상품 구조 이해 실패</p>
+          <h2>무엇을 구독하고 어떻게 이용하는지 불명확해 탐색 과정에서 이탈합니다</h2>
+            <p>AS IS 메인 홈에서는 사용자가 무엇을 눌러야 하는지 알기 어렵고, 어디서부터 어디까지가 하나의 상품인지 구분하기 어려웠습니다.</p>
+            <p>AS IS 상품 상세에서는 상품에 포함된 혜택을 선택하고 조합하는 방식이 충분히 전달되지 않고, 추가 혜택이 명확한 기준 없이 나열되어 원하는 상품을 찾기 어려웠으며, 선택 결과가 텍스트 중심으로 제공되어 어떤 상품을 골랐는지 파악하기 어려웠습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-05.png" alt="무엇을 구독하고 어떻게 이용하는지 불명확해 탐색 과정에서 이탈합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 05 · 05 · Problem · 상품 구조 이해 실패"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-05.png · 포트폴리오 p.22</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 06 · 포트폴리오 p.23 ── -->
+      <section class="detail-block" id="page-06">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution · 상품 구조를 쉽게 이해할 수 있도록</p>
+          <h2>T 우주의 구독 구조를 한눈에 이해할 수 있도록 시각화합니다</h2>
+            <p>T 우주의 상품을 쉽게 이해할 수 있도록 ‘패스 상품’을 ‘티켓’ 형태로 상품 정보와 혜택을 일관성 있게 보여줍니다. 묶음형 구독 상품(패스)을 구성하는 혜택 개수를 표현하고, 하나의 상품을 구성하는 여러 혜택을 순서대로 표현하며, 담기 버튼 CTA로 묶음형 상품을 바로 구매하도록 유도했습니다.</p>
+            <p>상품 카드 이터레이션에서 여러 혜택이 하나의 상품으로 인지되도록 구성했고, 묶음형 상품(패스)의 구성 관계가 드러나도록 보완했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-06.png" alt="T 우주의 구독 구조를 한눈에 이해할 수 있도록 시각화합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 06 · 06 · Solution · 상품 구조를 쉽게 이해할 수 있도록"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-06.png · 포트폴리오 p.23</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 07 · 포트폴리오 p.24 ── -->
+      <section class="detail-block" id="page-07">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution · 상품 구조를 쉽게 이해할 수 있도록</p>
+          <h2>상품의 구조를 순서대로 이해할 수 있도록 합니다</h2>
+            <p>상품에 포함된 혜택의 구조를 기본 상품, 추가 상품의 순서로 차근차근 선택하고 비교할 수 있도록 도왔습니다. 다양한 브랜드 로고를 통해 선택 가능한 상품에 대한 기대감을 형성하고, 가입하기 버튼은 구독하기로 레이블을 변경했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-07.png" alt="상품의 구조를 순서대로 이해할 수 있도록 합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#e8f6f2,#dde5ff)" data-label="Page 07 · 07 · Solution · 상품 구조를 쉽게 이해할 수 있도록"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-07.png · 포트폴리오 p.24</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 08 · 포트폴리오 p.25 ── -->
+      <section class="detail-block" id="page-08">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution · 상품 구조를 쉽게 이해할 수 있도록</p>
+          <h2>상품을 고르고 담는 과정을 익숙한 커머스 흐름으로 구성합니다</h2>
+            <p>상품 내에 포함된 상품의 개수와 혜택을 우선 확인한 후 단계적으로 원하는 혜택을 명확히 선택할 수 있도록 도왔습니다. 상품 유형과 노출 기준을 명확히 보여줘 원하는 상품을 빠르게 찾도록 하고, 선택한 상품 구성과 결제 금액을 확인한 뒤 다음 단계로 넘어가도록 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-08.png" alt="상품을 고르고 담는 과정을 익숙한 커머스 흐름으로 구성합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#e8f6f2,#dde5ff)" data-label="Page 08 · 08 · Solution · 상품 구조를 쉽게 이해할 수 있도록"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-08.png · 포트폴리오 p.25</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 09 · 포트폴리오 p.26 ── -->
+      <section class="detail-block" id="page-09">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem · 구독 혜택 사용과 관리의 허들</p>
+          <h2>혜택 이용 기능이 깊은 구조에 위치해 쉽게 찾지 못합니다</h2>
+            <p>AS IS 구독 관리에서는 상품 정보가 한꺼번에 노출되어 필요한 정보를 구분하기 어렵고, 상세 페이지에서 이용 중인 상품 리스트와 동일한 정보를 제공하며, 필요한 상품 정보를 단계적으로 확인할 수 있는 구조가 부족했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-09.png" alt="혜택 이용 기능이 깊은 구조에 위치해 쉽게 찾지 못합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 09 · 09 · Problem · 구독 혜택 사용과 관리의 허들"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-09.png · 포트폴리오 p.26</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 10 · 포트폴리오 p.27 ── -->
+      <section class="detail-block" id="page-10">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution · 이용과 관리의 경험이 구분되도록</p>
+          <h2>구독 중인 혜택을 빠르게 찾고 바로 사용할 수 있도록 합니다</h2>
+            <p>사용자가 구독 상품을 구매한 뒤 별도의 탐색 없이 바로 상세와 이용 단계로 이어질 수 있도록 진입 동선을 개선했습니다. GNB 탭에 ‘이용’을 배치해 이용 가능한 혜택에 바로 접근하고, 토글로 혜택 정렬 기준(유형별·상품별)을 전환할 수 있게 했습니다.</p>
+            <p>오프라인에서 사용하는 바코드 기능을 최상단에 노출하고, 개별 항목은 상품별 개별 바코드로 이동하며 브랜드 키 컬러로 상품 종류의 직관성을 높였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-10.png" alt="구독 중인 혜택을 빠르게 찾고 바로 사용할 수 있도록 합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#2a2a2e,#101012)" data-label="Page 10 · 10 · Solution · 이용과 관리의 경험이 구분되도록"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-10.png · 포트폴리오 p.27</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 11 · 포트폴리오 p.28 ── -->
+      <section class="detail-block" id="page-11">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution · 이용과 관리의 경험이 구분되도록</p>
+          <h2>구독 관리에 필요한 정보를 한곳에 모아 확인 흐름을 단순화합니다</h2>
+            <p>가입 상품과 결제 정보, 포함 혜택을 분산하지 않고 한 영역에 정리해 사용자가 현재 구독 상태를 빠르게 확인하고 관리할 수 있도록 했습니다. 바로 사용 가능한 혜택을 개수 현황 버튼으로 제공하고, 리스트에서 상태값을 노출해 상품 현황을 빠르게 확인하게 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-11.png" alt="구독 관리에 필요한 정보를 한곳에 모아 확인 흐름을 단순화합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#e8f6f2,#dde5ff)" data-label="Page 11 · 11 · Solution · 이용과 관리의 경험이 구분되도록"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-11.png · 포트폴리오 p.28</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 12 · 포트폴리오 p.29 ── -->
+      <section class="detail-block" id="page-12">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Project Result</p>
+          <h2>사용자 클릭률 데이터를 통한 디자인 의도에 따른 성과 확인</h2>
+            <p>패스 상품 영역의 구성 담기 버튼이 눌리지 않는 영역과 대비해 활성화되었고, 신규·재방문 여부와 상관없이 50%의 사용자가 패스 상품이 있는 중하위 영역까지 깊게 스크롤해 확인했습니다.</p>
+            <p>전체 사용자 중 40.5%가 상품 상세 진입 후 ‘구독을 하기’로 결정했고, ‘이용’ 페이지 안에서 목적은 다르지만 상품별·유형별 토글을 활발히 사용했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-12.png" alt="사용자 클릭률 데이터를 통한 디자인 의도에 따른 성과 확인" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 12 · 12 · Project Result"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-12.png · 포트폴리오 p.29</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 13 · 포트폴리오 p.30 ── -->
+      <section class="detail-block" id="page-13">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Project Result</p>
+          <h2>사용자 클릭률 데이터를 통한 2차 개선 방향 도출</h2>
+            <p>좌상단 이름 영역의 클릭률이 ‘회원 정보 관리’ 기능에 비해 높아, 사용자가 마이페이지 랜딩을 기대한다고 보고 톱니바퀴 아이콘으로 변경했습니다.</p>
+            <p>담기 완료 직후 카트로 63% 이동하지만 결제 직전 10% 이탈해, 담기 바텀시트에 바로 결제하기 버튼을 추가하고 기존 카트 버튼 레이블을 정리했습니다. 이름 영역을 눌러보는 경향에 맞춰 이용 페이지 타이틀을 용도에 맞게 구체화했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-13.png" alt="사용자 클릭률 데이터를 통한 2차 개선 방향 도출" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#ff6b5e,#ffd9d3)" data-label="Page 13 · 13 · Project Result"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-13.png · 포트폴리오 p.30</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 14 · 포트폴리오 p.31 ── -->
+      <section class="detail-block" id="page-14">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Appendix · AI Plugin</p>
+          <h2>AI 이미지 제작 플러그인 개발, 제작 프로세스 소요 시간 2일 → 10분으로 단축</h2>
+            <p>초기 AI 가이드라인을 기반으로 T 우주 운영용 3D 아이콘을 제작하기 위한 플러그인을 개발했습니다. 평균 2일이 소요되던 3D 아이콘 제작 프로세스가 약 10분 수준으로 단축되는 성과가 확인되었습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-14.png" alt="AI 이미지 제작 플러그인 개발, 제작 프로세스 소요 시간 2일 → 10분으로 단축" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 14 · 14 · Appendix · AI Plugin"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-14.png · 포트폴리오 p.31</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 15 · 포트폴리오 p.32 ── -->
+      <section class="detail-block" id="page-15">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Appendix · Design System</p>
+          <h2>상태값 기반 컴포넌트 시스템으로 운영성과 구현 일관성 확보했습니다</h2>
+            <p>노출되는 정보와 상태값에 따른 분기 기준을 정리하고, 실제 화면 흐름에 맞춘 디자인 시스템을 구축했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/t-universe/t-universe-page-15.png" alt="상태값 기반 컴포넌트 시스템으로 운영성과 구현 일관성 확보했습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 15 · 15 · Appendix · Design System"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">t-universe-page-15.png · 포트폴리오 p.32</figcaption>
+        </figure>
+      </section>
+
+
+      </article>
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="site-footer">
+      <div class="site-footer__theme">
+        <button type="button" class="theme-btn" aria-label="테마 전환 버튼" data-theme-toggle>
+          <span class="sr-only">테마를 전환합니다.</span>
+          <span class="theme-btn__icon theme-btn__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+          </span>
+          <span class="theme-btn__icon theme-btn__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z"/></svg>
+          </span>
+        </button>
+      </div>
+      <div class="site-footer__copy">
+        <p>© 2026 Hyebin Lee. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

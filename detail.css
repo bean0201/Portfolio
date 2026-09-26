@@ -1,0 +1,456 @@
+/* ==========================================================================
+   프로젝트 상세 페이지 (plumyyy.com/articles 레이아웃 기준)
+   - 히어로: 정방형 풀블리드 이미지 + 좌하단 날짜/제목 (mix-blend-difference)
+   - 본문: 검은 배경, 텍스트 컬럼 max 864px, 미디어는 풀블리드(패딩 24px, 라운드 32px)
+   - 섹션 간격: 모바일 16px / md 96px
+   ========================================================================== */
+
+/* ---------- 상세 페이지 테마 토큰 (라이트/다크 전환 반영) ---------- */
+:root {
+  --d-bg: var(--background);
+  --d-fg: var(--foreground);
+  --d-body: var(--n-700);
+  --d-muted: rgb(0 0 0 / 0.45);
+  --d-faint: rgb(0 0 0 / 0.4);
+  --d-line: rgb(0 0 0 / 0.12);
+  --d-figure: #f5f5f5;
+  --d-figure-light: #f5f5f5;
+  --d-dot: rgb(0 0 0 / 0.3);
+  --d-nav: rgb(0 0 0 / 0.5);
+  --d-nav-hover: var(--foreground);
+  --d-meta: rgb(0 0 0 / 0.8);
+  --d-phone: #111;
+}
+html.dark {
+  --d-bg: #000;
+  --d-fg: #fff;
+  --d-body: #fff;
+  --d-muted: rgb(255 255 255 / 0.6);
+  --d-faint: rgb(255 255 255 / 0.4);
+  --d-line: rgb(255 255 255 / 0.12);
+  --d-figure: #0a0a0a;
+  --d-figure-light: #f5f5f5;
+  --d-dot: rgb(163 163 163 / 0.5);
+  --d-nav: rgb(255 255 255 / 0.5);
+  --d-nav-hover: #fff;
+  --d-meta: rgb(255 255 255 / 0.85);
+  --d-phone: #111;
+}
+
+.detail-page {
+  background: var(--d-bg);
+  color: var(--d-fg);
+}
+.detail-page .site-footer {
+  background: var(--d-bg);
+}
+/* 상세 페이지에서는 Work / About 세그먼트 내비를 숨김 (Back 버튼과 테마 버튼만 유지) */
+.detail-page .seg-nav {
+  display: none;
+}
+
+/* ---------- 히어로 ---------- */
+/* 대문: 이미지 비율(1920×1000)을 모든 화면에서 그대로 따르는 풀블리드.
+   안의 텍스트는 화면 폭에 비례해 줄어들어(clamp) 어느 폭에서도 히어로 안에 들어간다. */
+.detail-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1000;
+  overflow: hidden;
+  background: var(--d-bg);
+}
+.detail-hero__media {
+  position: absolute;
+  inset: 0;
+}
+.detail-hero__media > img,
+.detail-hero__media > video,
+.detail-hero__media > .slide__ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+}
+/* header.absolute.bottom-12.left-8.max-w-4xl.flex-col.gap-4.text-white.mix-blend-difference
+   → 좌표·간격을 뷰포트 비례로: 1440px에서 원본 값(32 / 48 / 16), 좁아질수록 같은 비율로 축소 */
+.detail-hero__header {
+  position: absolute;
+  left: clamp(16px, 2.22vw, 32px);
+  right: clamp(16px, 2.22vw, 32px);
+  bottom: clamp(14px, 3.33vw, 48px);
+  max-width: 896px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1.11vw, 16px);
+  align-items: flex-start;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+/* p.text-sm.font-medium → 1440px에서 15.75px */
+.detail-hero__date {
+  font-size: clamp(11px, 1.09vw, 15.75px);
+  line-height: 1.45;
+  font-weight: 500;
+}
+/* h1.text-6xl.font-medium → 1440px에서 67.5px, 375px에서 약 22px */
+.detail-hero__title {
+  font-size: clamp(22px, 4.69vw, 67.5px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+.detail-hero__subtitle {
+  margin-top: clamp(4px, 0.83vw, 12px);
+  font-size: clamp(11px, 1.11vw, 16px);
+  line-height: 1.45;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* 모바일: 제목 블록을 이미지 아래 검은 영역으로 내림 (이미지는 비율 그대로, 텍스트는 크게) */
+@media (max-width: 767px) {
+  .detail-hero {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-hero__media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 1920 / 1000;
+  }
+  .detail-hero__header {
+    position: static;
+    inset: auto;
+    max-width: none;
+    padding: 28px 20px 0;
+    gap: 10px;
+    mix-blend-mode: normal;
+    color: var(--d-fg);
+  }
+  .detail-hero__date {
+    font-size: 13px;
+  }
+  .detail-hero__title {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+  .detail-hero__subtitle {
+    margin-top: 6px;
+    font-size: 14px;
+  }
+  /* 제목이 검은 영역으로 내려왔으니 본문 상단 여백은 줄임 (기본 규칙보다 우선하도록 선택자 강화) */
+  .detail-page .detail-main {
+    padding-top: 56px;
+  }
+}
+
+/* ---------- 본문 ---------- */
+/* main.pt-28.pb-20.bg-black */
+.detail-main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 112px 0 80px;
+  background: var(--d-bg);
+  color: var(--d-fg);
+}
+@media (min-width: 768px) {
+  .detail-main {
+    padding: 126px 0 90px;
+  }
+}
+/* article.flex-col.items-center.gap-4.md:gap-24 */
+.detail-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .detail-article {
+    gap: 96px;
+  }
+}
+.detail-article > section {
+  width: 100%;
+}
+
+/* 텍스트 섹션: div.mx-auto.flex-col.gap-5.max-w-3xl > p.text-base.text-white */
+.detail-text {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 864px;
+  padding: 0 20px;
+}
+.detail-text p {
+  /* 레퍼런스(plumyyy watt-a-lot) 본문: "Helvetica Neue", Arial, Pretendard / 16·24 → md 18·27 / 자간 .18px / 400 / 전경색 100% */
+  font-family: "Helvetica Neue", Arial, "Pretendard Variable", Pretendard, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+  color: var(--d-fg);
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: manual;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .detail-text {
+    padding: 0 24px;
+  }
+  .detail-text p {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18px;
+  }
+}
+.detail-text p a {
+  color: var(--d-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+/* 섹션 안 소제목(필요 시): 레퍼런스에는 없으나 확장용 */
+.detail-text h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--d-fg);
+}
+@media (min-width: 768px) {
+  .detail-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* 섹션 아이브로우: "01 · Background" */
+.detail-eyebrow {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  color: var(--d-faint) !important;
+  letter-spacing: 0.02em;
+}
+
+/* 프로젝트 메타 표 (작업 목적 · 기간 · 인원 · 역할 · 툴) */
+.detail-meta {
+  margin: 0 auto;
+  max-width: 864px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 24px;
+}
+@media (min-width: 640px) {
+  .detail-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .detail-meta {
+    padding: 0 24px;
+  }
+}
+.detail-meta__item {
+  border-top: 2px solid var(--d-line);
+  padding-top: 8px;
+}
+.detail-meta__item dt {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--d-faint);
+  margin-bottom: 4px;
+}
+.detail-meta__item dd {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--d-meta);
+  word-break: keep-all;
+}
+
+/* 페이지 블록: 이미지(16:9 풀블리드) + 본문. 블록 사이 간격은 article gap(96px), 블록 내부는 32px */
+.detail-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+/* 본문 → 이미지 순서 (마크업도 같은 순서, 안전장치로 order 지정) */
+.detail-block .detail-text { order: 1; }
+.detail-block .detail-figure { order: 2; }
+@media (min-width: 768px) {
+  .detail-block {
+    gap: 40px;
+  }
+}
+
+/* 미디어 섹션: figure > div.w-full.rounded[padding:24px][aspect-ratio] > div.overflow-hidden[radius:32px] > img.object-cover */
+.detail-figure {
+  width: 100%;
+}
+/* 스크롤 인터랙션: 기본 여백 24px(인터랙션 전 크기 = 최대 크기)을 유지하고,
+   중앙에서 멀어질수록 여백이 최대 24px 더 늘고 모서리 32px까지 둥글어짐. 중앙에서는 24px 여백·모서리 0.
+   --p(0~1)는 script.js initDetailScrollFrames()가 스크롤마다 갱신. JS 미동작 시 48px/32px 고정. */
+.detail-figure__frame {
+  --p: 1;
+  width: 100%;
+  padding: calc(24px + var(--p) * 24px);
+  /* 높이는 이미지가 결정 (고정 비율·크롭 없음) */
+}
+.detail-figure__clip {
+  width: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--p) * 32px);
+  background: transparent;          /* 이미지 뒤 배경 없음 */
+  position: relative;
+}
+.detail-figure__clip > img,
+.detail-figure__clip > video {
+  display: block;
+  width: 100%;
+  height: auto;                     /* 원본 비율 유지, 잘리지 않음 */
+}
+/* 플레이스홀더만 프레임 비율(--ar)로 높이를 잡음 */
+.detail-figure__clip > .slide__ph {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ar, 16 / 9);
+}
+/* 밝은 배경의 도판(레퍼런스의 흰 카드 섹션) */
+.detail-figure__clip--light {
+  background: transparent;
+}
+/* 캡션 */
+.detail-figure__caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--d-faint);
+}
+
+/* 캐러셀 섹션 (레퍼런스 Article media carousel) */
+.detail-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.detail-carousel__viewport {
+  overflow: hidden;
+}
+.detail-carousel__track {
+  display: flex;
+  margin-left: -12px;
+  touch-action: pan-y;
+  transition: transform 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.detail-carousel__slide {
+  min-width: 0;
+  flex: 0 0 100%;
+  padding-left: 12px;
+}
+.detail-carousel__slide figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.detail-carousel__media {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: var(--d-figure);
+}
+.detail-carousel__media > img,
+.detail-carousel__media > video,
+.detail-carousel__media > .slide__ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.detail-carousel__dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+/* button.size-1.5.rounded-full.bg-neutral-400/50 */
+.detail-carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--d-dot);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+.detail-carousel__dot.is-active {
+  opacity: 1;
+}
+
+/* 하단 내비: 이전/다음 프로젝트 */
+.detail-nav {
+  margin: 0 auto;
+  max-width: 864px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--d-nav);
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .detail-nav {
+    padding: 0 24px;
+  }
+}
+.detail-nav a {
+  transition: color 0.2s ease;
+}
+.detail-nav a:hover {
+  color: var(--d-nav-hover);
+}
+
+
+/* ==========================================================================
+   페이지 전환 — 상세 페이지 진입/이탈 (과하지 않게)
+   진입: 히어로 이미지가 살짝 확대된 상태에서 서서히 선명해지고, 본문은 아래에서 12px 떠오름.
+   이탈: script.js initPageTransitions()가 html.is-leaving을 붙이면 전체가 240ms 동안 페이드아웃 후 이동.
+   ========================================================================== */
+@keyframes detail-hero-in {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes detail-main-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+.detail-page .detail-hero__media {
+  overflow: hidden; /* 확대 중 넘치는 부분 숨김 */
+}
+.detail-page .detail-hero__media > img,
+.detail-page .detail-hero__media > video {
+  animation: detail-hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+.detail-page .detail-main {
+  animation: detail-main-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .detail-page .detail-hero__media > img,
+  .detail-page .detail-hero__media > video,
+  .detail-page .detail-main {
+    animation: none;
+  }
+}

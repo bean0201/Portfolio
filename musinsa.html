@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MUSINSA UX·UI Build — Hyebin Lee</title>
+  <meta name="description" content="Fashion Platform MUSINSA App·Web UXUI Renewal Project · Musinsa · 2023. 12 – 2024. 8">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detail.css">
+  <script>
+    (function () {
+      var s = localStorage.getItem("theme");
+      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body class="detail-page">
+  <div class="shell">
+
+    <!-- ===== 고정 헤더 ===== -->
+    <div class="site-header">
+<a class="theme-btn back-btn" href="index.html" aria-label="Work 페이지로 돌아가기">
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+        <span>Back</span>
+      </a>
+
+      <nav class="seg-nav" data-active="work" aria-label="주 메뉴">
+        <div class="seg-nav__bg"></div>
+        <div class="seg-nav__track"><span class="seg-nav__pill"></span></div>
+        <div class="seg-nav__links">
+          <a class="seg-nav__link is-active" href="index.html" aria-current="page"><span>Work</span></a>
+          <a class="seg-nav__link" href="info.html"><span>About</span></a>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- ===== 히어로: 이미지 비율 그대로 풀블리드 + 날짜/제목 ===== -->
+    <figure class="detail-hero">
+      <div class="detail-hero__media">
+        <img src="images/musinsa/musinsa-hero.png" alt="MUSINSA UX·UI Build" width="1920" height="1000" fetchpriority="high" decoding="async">
+      </div>
+      <header class="detail-hero__header reveal" style="--delay:.1s">
+        <p class="detail-hero__date">2023. 12 – 2024. 8 · MUSINSA</p>
+        <hgroup>
+          <h1 class="detail-hero__title">MUSINSA UX·UI Build</h1>
+          <p class="detail-hero__subtitle">Fashion Platform MUSINSA App·Web UXUI Renewal Project</p>
+        </hgroup>
+      </header>
+    </figure>
+
+    <!-- ===== 본문: 포트폴리오 페이지 단위 블록 (이미지 + 본문) ===== -->
+    <main class="detail-main">
+      <article class="detail-article">
+
+      <section>
+        <dl class="detail-meta">
+            <div class="detail-meta__item"><dt>작업 목적</dt><dd>기존 서비스 개선 제안 및 구축</dd></div>
+            <div class="detail-meta__item"><dt>작업 기간</dt><dd>2023년 12월 – 2024년 8월 (9개월)</dd></div>
+            <div class="detail-meta__item"><dt>참여 인원</dt><dd>UXUI 4명 · UX 기여도 50% · UI 기여도 40%</dd></div>
+            <div class="detail-meta__item"><dt>주요 역할</dt><dd>리서치 및 문제 정의, MDS 2.0 기반 모듈형 컴포넌트 설계, 콘텐츠·후기·스냅 영역의 공통 UI 패턴 정의, 인터페이스 디자인 및 배포 QA</dd></div>
+            <div class="detail-meta__item"><dt>작업 툴</dt><dd>Figma, Slack, Jira, Confluence</dd></div>
+        </dl>
+      </section>
+
+      <!-- ── Page 01 · 포트폴리오 p.34 ── -->
+      <section class="detail-block" id="page-01">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Background</p>
+          <h2>패션 커뮤니티에서 종합 커머스로 확장한 무신사, 성장을 받쳐줄 하나의 탐색 구조가 필요했습니다</h2>
+            <p>다양한 브랜드와 전문관, 콘텐츠가 늘어나며 서비스 확장성과 일관된 탐색 경험을 함께 확보해야 했습니다. 무신사 버티컬 서비스는 단순 ‘카테고리’에서 ‘핵심 성장 전략’으로 전환이 필요한 상황이었고, 사용자가 원하는 상품과 콘텐츠를 찾고 더 많은 상품을 조회하기를 바라는 내부 니즈가 있었습니다.</p>
+            <p>클라이언트 인터뷰에서는 고객에게 더 많은 상품을 제안하고, 무신사의 정제된 정체성에 여러 브랜드를 담아낼 수 있는 안정적인 플랫폼 구조가 필요하다는 방향이 확인되었습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-01.png" alt="패션 커뮤니티에서 종합 커머스로 확장한 무신사, 성장을 받쳐줄 하나의 탐색 구조가 필요했습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#2a2a2e,#101012)" data-label="Page 01 · 01 · Background"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-01.png · 포트폴리오 p.34</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 02 · 포트폴리오 p.35 ── -->
+      <section class="detail-block" id="page-02">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Analyze 1</p>
+          <h2>익숙한 커머스 패턴에서 예측 가능한 탐색의 기준을 찾았습니다</h2>
+            <p>유사 서비스는 상품 특성이 달라도 검색, 카테고리, 이미지 카드 등 공통된 탐색 구조를 사용하고 있었습니다. 차별화를 위해 새로운 사용법보다, 익숙한 구조 안에서 무신사의 상품과 콘텐츠를 잘 보여주는 것이 중요했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-02.png" alt="익숙한 커머스 패턴에서 예측 가능한 탐색의 기준을 찾았습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 02 · 02 · Analyze 1"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-02.png · 포트폴리오 p.35</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 03 · 포트폴리오 p.36 ── -->
+      <section class="detail-block" id="page-03">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem Definition 1</p>
+          <h2>상품이 많아서가 아니라, 같은 목적까지 가는 방식이 달랐습니다</h2>
+            <p>홈과 카테고리, 전문관마다 진입 방식과 정보 위계가 달라 사용자와 운영자 모두 반복적인 복잡성을 경험하고 있었습니다. 홈과 카테고리 탭에서 서로 다른 방식으로 노출되는 전문관 진입 구조, 상품과 콘텐츠별 운영 니즈에 대응하며 복잡해진 화면 패턴이 문제였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-03.png" alt="상품이 많아서가 아니라, 같은 목적까지 가는 방식이 달랐습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#ff6b5e,#ffd9d3)" data-label="Page 03 · 03 · Problem Definition 1"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-03.png · 포트폴리오 p.36</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 04 · 포트폴리오 p.37 ── -->
+      <section class="detail-block" id="page-04">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 1 · 예측 가능한 탐색 흐름 설계</p>
+          <h2>두 가지 탐색 의도를 기준으로 홈과 게이트웨이의 역할을 나눴습니다</h2>
+            <p>찾는 상품이 명확한 경우와 그렇지 않은 경우를 나누어 각 상황에 맞는 탐색 시작점을 설계했습니다. 상품군을 고르면 관련 전문관으로 바로 이어지고, 버티컬 서비스의 탐색 시작점을 검색과 퀵메뉴로 통일했습니다.</p>
+            <p>게이트웨이 4차, 홈 3차 이터레이션을 거치며 서비스의 인상을 연결하는 상품군 이미지와 자연스러운 배너 결합, 검색창 노출로 목적형 탐색을 지원하는 방향을 확정했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-04.png" alt="두 가지 탐색 의도를 기준으로 홈과 게이트웨이의 역할을 나눴습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 04 · 04 · Solution 1 · 예측 가능한 탐색 흐름 설계"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-04.png · 포트폴리오 p.37</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 05 · 포트폴리오 p.38 ── -->
+      <section class="detail-block" id="page-05">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 1 · 예측 가능한 탐색 흐름 설계</p>
+          <h2>상품군을 고르면, 전문관으로 바로 이어집니다</h2>
+            <p>코스메틱, 슈즈, 스포츠처럼 찾는 상품군에 따라 전문관을 연결해 목적에 맞게 탐색을 시작합니다. 로고와 대표 이미지를 함께 배치해 전문관별 차이를 구분하고, 무신사와 동일한 위계로 보일 수 있도록 서비스 전환 위치를 상단에 배치했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-05.png" alt="상품군을 고르면, 전문관으로 바로 이어집니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#2a2a2e,#101012)" data-label="Page 05 · 05 · Solution 1 · 예측 가능한 탐색 흐름 설계"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-05.png · 포트폴리오 p.38</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 06 · 포트폴리오 p.39 ── -->
+      <section class="detail-block" id="page-06">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 1 · 예측 가능한 탐색 흐름 설계</p>
+          <h2>홈의 탐색 시작점을 ‘바로 찾기’와 ‘둘러보기’로 단순화했습니다</h2>
+            <p>검색과 퀵메뉴의 역할을 명확히 나누어 사용자의 탐색 목적에 맞는 시작점을 제공합니다. 검색창을 상단에 배치해 목적이 분명한 탐색을 빠르게 시작하고, 찾는 상품이 구체적이지 않은 사용자는 전문관의 주요 상품군부터 살펴봅니다. 세로로 다양한 상품과 스타일을 탐색하고, 가로로 비슷한 상품과 연결 콘텐츠를 비교합니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-06.png" alt="홈의 탐색 시작점을 ‘바로 찾기’와 ‘둘러보기’로 단순화했습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 06 · 06 · Solution 1 · 예측 가능한 탐색 흐름 설계"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-06.png · 포트폴리오 p.39</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 07 · 포트폴리오 p.40 ── -->
+      <section class="detail-block" id="page-07">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 1 · 예측 가능한 탐색 흐름 설계</p>
+          <h2>디바이스 너비에 따라 카드 노출 비율을 유연하게 조정</h2>
+            <p>카드 컴포넌트를 디바이스 너비에 따라 노출 비율이 유연하게 조정되도록 설계하고, 화면을 가득 채우지 않고 다음 콘텐츠의 존재를 미리 노출했습니다. 일부 컴포넌트의 어포던스와 썸네일 축소 이슈는 이터레이션으로 보완했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-07.png" alt="디바이스 너비에 따라 카드 노출 비율을 유연하게 조정" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 07 · 07 · Solution 1 · 예측 가능한 탐색 흐름 설계"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-07.png · 포트폴리오 p.40</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 08 · 포트폴리오 p.41 ── -->
+      <section class="detail-block" id="page-08">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution Result</p>
+          <h2>메인 홈 → 상품 상세 조회수 157% 증가, 구매 전환율 3배 증가</h2>
+            <p>UI·UX 개편 후 3개월간(2024년 9월–12월) 무신사 스토어 홈에서 상품 상세 페이지 조회수가 전년 동기 대비 157% 상승했고 구매 전환율은 3배 증가했습니다.</p>
+            <p>무신사 뷰티 전문관은 9월 기준 방문자 2.3배, 신규 구매자 2.7배 증가하며 빠르게 고객 저변을 확대했습니다. 뷰티 상품 상세 페이지 조회 사용자 수 116% 증가, 뷰티 상품 조회수 2.7배. (출처: 무신사 뉴스룸)</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-08.png" alt="메인 홈 → 상품 상세 조회수 157% 증가, 구매 전환율 3배 증가" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 08 · 08 · Solution Result"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-08.png · 포트폴리오 p.41</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 09 · 포트폴리오 p.42 ── -->
+      <section class="detail-block" id="page-09">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Analyze 2</p>
+          <h2>이미지로 먼저 관심을 만들고, 필요한 정보는 이후에 확장합니다</h2>
+            <p>유사 서비스는 정보를 먼저 요구하기보다 이미지에서 시작해 관심에 따라 탐색 범위를 넓히고 있었습니다. 스냅도 필터보다 이미지를 먼저 보여주는 탐색 방식이 적합하다고 판단했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-09.png" alt="이미지로 먼저 관심을 만들고, 필요한 정보는 이후에 확장합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 09 · 09 · Analyze 2"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-09.png · 포트폴리오 p.42</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 10 · 포트폴리오 p.43 ── -->
+      <section class="detail-block" id="page-10">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem Definition 2</p>
+          <h2>콘텐츠보다 탐색 조건이 앞서며 스타일 발견의 흐름이 끊기고 있었습니다</h2>
+            <p>무신사는 타인의 스타일을 통해 취향과 구매 힌트를 발견하는 경험이 강점이었지만, 상단의 키워드와 필터가 콘텐츠보다 먼저 노출되며 이미지에서 시작해야 할 탐색 흐름을 방해하고 있었습니다. 콘텐츠를 이동할 때마다 탭과 탐색 방식이 달라지고, 추천 피드에서 관심 콘텐츠를 발견하지 못한 사용자 중 70%가 이탈했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-10.png" alt="콘텐츠보다 탐색 조건이 앞서며 스타일 발견의 흐름이 끊기고 있었습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#ff6b5e,#ffd9d3)" data-label="Page 10 · 10 · Problem Definition 2"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-10.png · 포트폴리오 p.43</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 11 · 포트폴리오 p.44 ── -->
+      <section class="detail-block" id="page-11">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 2 · 최소한의 정보로 콘텐츠 탐색</p>
+          <h2>이미지 중심의 피드와 정보 중심의 상세로 역할을 나눴습니다</h2>
+            <p>피드에서는 스타일에 집중하고, 상세에서 착용 정보와 상품을 확인합니다. 상품과 스타일 콘텐츠를 연결해 탐색이 서로 이어지도록 했고, 메인에서 정리한 탐색 원칙을 스냅 전체 경험으로 확장했습니다.</p>
+            <p>1차 이터레이션에서 상단 정보를 줄여 이미지 집중도를 높였지만 상품으로 이어지는 단서가 부족했고, 2차에서 정보 밀도를 낮추면서도 탐색에 필요한 단서는 유지하고 상세에서 착용 정보와 상품을 연결해 보완했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-11.png" alt="이미지 중심의 피드와 정보 중심의 상세로 역할을 나눴습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#f3f3f3,#dcdcdc)" data-label="Page 11 · 11 · Solution 2 · 최소한의 정보로 콘텐츠 탐색"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-11.png · 포트폴리오 p.44</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 12 · 포트폴리오 p.45 ── -->
+      <section class="detail-block" id="page-12">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 2 · 최소한의 정보로 콘텐츠 탐색</p>
+          <h2>피드에서는 스타일에 집중하고, 상세에서 착용 정보와 상품을 확인합니다</h2>
+            <p>피드의 정보는 줄이고 상세의 정보를 보강해 관심에 따라 정보를 단계적으로 확인하도록 했습니다. 이미지 중심 피드로 재구성해 한눈에 더 많은 스타일을 탐색하고, 좋아요를 전면에 배치해 선호 신호를 빠르게 축적합니다. 작성자의 스펙을 함께 보여줘 나와 비슷한 착용 맥락에서 상품을 판단할 수 있습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-12.png" alt="피드에서는 스타일에 집중하고, 상세에서 착용 정보와 상품을 확인합니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 12 · 12 · Solution 2 · 최소한의 정보로 콘텐츠 탐색"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-12.png · 포트폴리오 p.45</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 13 · 포트폴리오 p.46 ── -->
+      <section class="detail-block" id="page-13">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 2 · 최소한의 정보로 콘텐츠 탐색</p>
+          <h2>상품과 스타일 콘텐츠를 연결해 탐색이 서로 이어지도록 했습니다</h2>
+            <p>스냅의 콘텐츠 소비가 체류에 머무르지 않고 새로운 상품 탐색으로 이어지는 구조를 고민했습니다. 상품을 보다가 착용 스타일을 함께 발견하고, 스타일을 보다가 착용 상품까지 바로 확인할 수 있게 연결해 탐색 전환 비용을 줄였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-13.png" alt="상품과 스타일 콘텐츠를 연결해 탐색이 서로 이어지도록 했습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 13 · 13 · Solution 2 · 최소한의 정보로 콘텐츠 탐색"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-13.png · 포트폴리오 p.46</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 14 · 포트폴리오 p.47 ── -->
+      <section class="detail-block" id="page-14">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution 3 · 최소한의 정보로 콘텐츠 탐색</p>
+          <h2>메인에서 정리한 탐색 원칙을 스냅 전체 경험으로 확장했습니다</h2>
+            <p>메인에서 정리한 정보 구조와 컴포넌트를 팔로잉, 패션톡, 검색, 작성까지 일관되게 적용했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-14.png" alt="메인에서 정리한 탐색 원칙을 스냅 전체 경험으로 확장했습니다" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(180deg,#ffffff,#ececec)" data-label="Page 14 · 14 · Solution 3 · 최소한의 정보로 콘텐츠 탐색"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-14.png · 포트폴리오 p.47</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 15 · 포트폴리오 p.48 ── -->
+      <section class="detail-block" id="page-15">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Appendix · Design System</p>
+          <h2>모든 조합을 확인할 수 있는 단일 라이브러리 구축</h2>
+            <p>실용성과 기능성을 최우선 가치로 설정하여 ‘최소한의 디자인, 최대한의 기능’이라는 무신사 디자인 시스템 아이덴티티로 UXUI 전략을 전개했습니다. Z축 기준의 계층 구조를 갖춘 모듈 중심의 디자인 시스템으로, 그레이 컬러를 중립적 배경으로 활용하고 화이트 컴포넌트를 쌓아 페이지를 빠르고 일관성 있게 구성할 수 있도록 모듈화했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-15.png" alt="모든 조합을 확인할 수 있는 단일 라이브러리 구축" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#7a6cf0,#e6e3ff)" data-label="Page 15 · 15 · Appendix · Design System"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-15.png · 포트폴리오 p.48</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Page 16 · 포트폴리오 p.49 ── -->
+      <section class="detail-block" id="page-16">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Solution Result</p>
+          <h2>스냅 유입 확대 이후 안정적인 이용 수준 유지</h2>
+            <p>서비스 배포 직후 GA4 지표를 통해 스냅 사용자 수가 25%로 급증했고, 이후 스냅 유입율은 19~22% 사이로 안정화되어 기존 12%에서 개선된 수치를 보였습니다. 활성 사용자 대비 스냅 유입률 12% → 20%. (출처: MUSINSA GA4, 2024.9–2024.10)</p>
+            <p>개발 가이드부터 레이어 구조, Use Case까지 디자이너를 포함한 기획자, 개발자 모두가 이해할 수 있는 단일 라이브러리를 구축하여 디자인 일관성을 확보하고 개발 정확성을 높였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:16 / 9">
+            <div class="detail-figure__clip">
+              <!-- 이미지로 교체: <img src="images/musinsa/musinsa-page-16.png" alt="스냅 유입 확대 이후 안정적인 이용 수준 유지" loading="lazy"> -->
+              <div class="slide__ph" style="--ph:linear-gradient(160deg,#2a2a2e,#101012)" data-label="Page 16 · 16 · Solution Result"></div>
+            </div>
+          </div>
+          <figcaption class="detail-figure__caption">musinsa-page-16.png · 포트폴리오 p.49</figcaption>
+        </figure>
+      </section>
+
+
+      </article>
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="site-footer">
+      <div class="site-footer__theme">
+        <button type="button" class="theme-btn" aria-label="테마 전환 버튼" data-theme-toggle>
+          <span class="sr-only">테마를 전환합니다.</span>
+          <span class="theme-btn__icon theme-btn__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+          </span>
+          <span class="theme-btn__icon theme-btn__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z"/></svg>
+          </span>
+        </button>
+      </div>
+      <div class="site-footer__copy">
+        <p>© 2026 Hyebin Lee. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
