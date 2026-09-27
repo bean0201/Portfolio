@@ -1155,6 +1155,11 @@ html.dark .theme-btn__icon--moon { display: inline-flex; }
 
 /* ---------- 모바일: 2열 그리드, 간격 일정(16px), 모두 4:5, 캡션은 카드 아래 ---------- */
 @media (max-width: 767px) {
+  /* 모바일: 카드가 작아지는 만큼 모서리도 16px → 12px */
+  .gallery .card,
+  .gallery .card__viewport {
+    border-radius: 12px;
+  }
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 96px 16px;          /* 세로는 캡션(제목 3줄 + 회사명, 최대 약 80px) 자리를 포함 */
