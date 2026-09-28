@@ -106,13 +106,14 @@ const PROJECTS = [
     slides: [{ type: "image", src: "images/musinsa/musinsa-card-01.jpg" }],
   },
   {
-    title: "Kakao Corporate Responsive Website UX·UI Build", client: "KAKAO", tags: ["Web Design", "Design System"],
+    title: "Midea Built-In Oven AI Flow UX·UI Build", client: "MIDEA", tags: ["AI Flow", "GUI", "Prototyping"],
+    href: "midea-oven.html",
     span: "1", ratio: "4/5",
     slides: [
-      { type: "image", src: "images/kakao/kakao-card-01.jpg" },
-      { type: "image", src: "images/kakao/kakao-card-02.jpg" },
-      { type: "image", src: "images/kakao/kakao-card-03.jpg" },
-      { type: "image", src: "images/kakao/kakao-card-04.jpg" },
+      { type: "image", src: "images/midea-oven/midea-oven-card-01.jpg" },
+      { type: "image", src: "images/midea-oven/midea-oven-card-02.jpg" },
+      { type: "image", src: "images/midea-oven/midea-oven-card-03.jpg" },
+      { type: "image", src: "images/midea-oven/midea-oven-card-04.jpg" },
     ],
   },
   {
@@ -146,14 +147,13 @@ const PROJECTS = [
     ],
   },
   {
-    title: "Midea Built-In Oven AI Flow UX·UI Build", client: "MIDEA", tags: ["AI Flow", "GUI", "Prototyping"],
-    href: "midea-oven.html",
+    title: "Kakao Corporate Responsive Website UX·UI Build", client: "KAKAO", tags: ["Web Design", "Design System"],
     span: "1", ratio: "4/5",
     slides: [
-      { type: "image", src: "images/midea-oven/midea-oven-card-01.jpg" },
-      { type: "image", src: "images/midea-oven/midea-oven-card-02.jpg" },
-      { type: "image", src: "images/midea-oven/midea-oven-card-03.jpg" },
-      { type: "image", src: "images/midea-oven/midea-oven-card-04.jpg" },
+      { type: "image", src: "images/kakao/kakao-card-01.jpg" },
+      { type: "image", src: "images/kakao/kakao-card-02.jpg" },
+      { type: "image", src: "images/kakao/kakao-card-03.jpg" },
+      { type: "image", src: "images/kakao/kakao-card-04.jpg" },
     ],
   },
 ];
