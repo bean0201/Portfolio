@@ -12,11 +12,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="detail.css">
   <script>
-    (function () {
-      var s = localStorage.getItem("theme");
-      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark");
-    })();
+    /* 이 페이지는 항상 다크 모드로 진입한다 (저장된 테마는 바꾸지 않으므로 다른 페이지로 돌아가면 원래 설정으로 복귀).
+       상단 토글은 그대로 동작한다. */
+    document.documentElement.classList.add("dark");
   </script>
 </head>
 <body class="detail-page detail-page--rounded">
