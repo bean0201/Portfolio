@@ -315,6 +315,12 @@ html.dark {
   width: 100%;
   height: auto;                     /* 원본 비율 유지, 잘리지 않음 */
 }
+/* 본문 영상: 로드 전에도 프레임 비율(--ar)로 자리를 잡고, 포스터가 그 자리를 채움 */
+.detail-figure__clip > video.detail-video {
+  aspect-ratio: var(--ar, 16 / 9);
+  object-fit: cover;
+  background: transparent;
+}
 /* 플레이스홀더만 프레임 비율(--ar)로 높이를 잡음 */
 .detail-figure__clip > .slide__ph {
   position: relative;

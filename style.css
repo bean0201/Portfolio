@@ -567,7 +567,7 @@ html.dark .theme-btn__icon--moon { display: inline-flex; }
   width: 50%;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 12px;
+  padding-bottom: 9px;           /* 화살표(20px) 중심 = 아래에서 19px = 도트(bottom 16 + 3px) 중심 */
   color: rgb(255 255 255 / 0.4);
   transition: color 0.2s ease;
   z-index: 10;
@@ -1191,8 +1191,12 @@ html.dark .theme-btn__icon--moon { display: inline-flex; }
     font-size: 12px;
     line-height: 16px;
   }
+  /* 모바일: 도트(6px)와 화살표(20px)의 세로 중심을 아래에서 17px로 맞춤 */
   .card__dots {
-    bottom: 10px;
+    bottom: 14px;
+  }
+  .card__nav {
+    padding-bottom: 7px;
   }
 }
 

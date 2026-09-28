@@ -147,6 +147,7 @@ const PROJECTS = [
   },
   {
     title: "Midea Built-In Oven AI Flow UX·UI Build", client: "MIDEA", tags: ["AI Flow", "GUI", "Prototyping"],
+    href: "midea-oven.html",
     span: "1", ratio: "4/5",
     slides: [
       { type: "image", src: "images/midea-oven/midea-oven-card-01.jpg" },
@@ -411,6 +412,40 @@ function initPageTransitions() {
   window.addEventListener("pageshow", () => document.documentElement.classList.remove("is-leaving"));
 }
 
+/* ---------- 상세 페이지 영상: 뷰포트 근처에서만 로드·재생, 벗어나면 정지 ----------
+   <video class="detail-video" data-src="..." poster="..." muted loop playsinline preload="none">
+   모션 최소화 설정에서는 자동 재생 대신 컨트롤을 노출한다. */
+function initDetailVideos() {
+  const videos = Array.from(document.querySelectorAll("video.detail-video[data-src]"));
+  if (!videos.length) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const load = (v) => {
+    if (v.dataset.loaded) return;
+    v.dataset.loaded = "1";
+    v.src = v.dataset.src;
+    v.load();
+  };
+  if (reduce) {
+    videos.forEach((v) => { v.controls = true; v.removeAttribute("loop"); load(v); });
+    return;
+  }
+  if (!("IntersectionObserver" in window)) {
+    videos.forEach((v) => { load(v); v.play().catch(() => {}); });
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(({ target: v, isIntersecting }) => {
+      if (isIntersecting) {
+        load(v);
+        v.play().catch(() => {});
+      } else if (!v.paused) {
+        v.pause();
+      }
+    });
+  }, { rootMargin: "50% 0px 50% 0px", threshold: 0 });
+  videos.forEach((v) => io.observe(v));
+}
+
 function initDetailCarousels() {
   document.querySelectorAll("[data-detail-carousel]").forEach((root) => {
     const track = root.querySelector("[data-track]");
@@ -444,3 +479,4 @@ renderGallery();
 initDetailCarousels();
 initDetailScrollFrames();
 initPageTransitions();
+initDetailVideos();

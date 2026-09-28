@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midea Built-In Oven AI Flow UX·UI Build — Hyebin Lee</title>
+  <meta name="description" content="Built-In Oven AI Cooking Flow GUI Proposal · Midea · 2025. 9 – 2025. 11">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detail.css">
+  <script>
+    (function () {
+      var s = localStorage.getItem("theme");
+      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body class="detail-page">
+  <div class="shell">
+
+    <!-- ===== 고정 헤더 ===== -->
+    <div class="site-header">
+<a class="theme-btn back-btn" href="index.html" aria-label="Work 페이지로 돌아가기">
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg>
+        <span>Back</span>
+      </a>
+
+      <nav class="seg-nav" data-active="work" aria-label="주 메뉴">
+        <div class="seg-nav__bg"></div>
+        <div class="seg-nav__track"><span class="seg-nav__pill"></span></div>
+        <div class="seg-nav__links">
+          <a class="seg-nav__link is-active" href="index.html" aria-current="page"><span>Work</span></a>
+          <a class="seg-nav__link" href="info.html"><span>About</span></a>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- ===== 히어로: 이미지 비율 그대로 풀블리드 + 날짜/제목 ===== -->
+    <figure class="detail-hero">
+      <div class="detail-hero__media">
+        <img src="images/midea-oven/midea-oven-hero.png" alt="Midea Built-In Oven AI Flow UX·UI Build" width="1920" height="1080" fetchpriority="high" decoding="async">
+      </div>
+      <header class="detail-hero__header reveal" style="--delay:.1s">
+        <p class="detail-hero__date">2025. 9 – 2025. 11 · MIDEA</p>
+        <hgroup>
+          <h1 class="detail-hero__title">Midea Built-In Oven AI Flow UX·UI Build</h1>
+          <p class="detail-hero__subtitle">Built-In Oven AI Cooking Flow GUI Proposal</p>
+        </hgroup>
+      </header>
+    </figure>
+
+    <!-- ===== 본문: 포트폴리오 페이지 단위 블록 (본문 + 영상/이미지) ===== -->
+    <main class="detail-main">
+      <article class="detail-article">
+
+      <section>
+        <dl class="detail-meta">
+            <div class="detail-meta__item"><dt>작업 목적</dt><dd>신규 빌트인 오븐의 AI 사용자 시나리오 구성 및 GUI 제안</dd></div>
+            <div class="detail-meta__item"><dt>작업 기간</dt><dd>2025년 9월 – 2025년 11월 (3개월)</dd></div>
+            <div class="detail-meta__item"><dt>참여 인원</dt><dd>Share X · Creative Director Kiwon Jang · Project Director Heewon Cho · Project Member Hyebin Lee</dd></div>
+            <div class="detail-meta__item"><dt>주요 역할</dt><dd>사용자 시나리오 구성, Ring UI 컨셉 및 4종 시안 제작, 인터페이스 디자인, 영상 프로토타입 제작, AI 생성 이미지 제작</dd></div>
+        </dl>
+      </section>
+
+      <!-- ── Page 02 ── -->
+      <section class="detail-block" id="page-02">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Background</p>
+          <h2>글로벌 가전 기업 메이디의 새로운 빌트인 오븐, 사용자 시나리오와 UI를 함께 설계했습니다</h2>
+            <p>메이디(Midea)는 중국의 대표 가전 기업으로, 중국을 넘어 유럽 시장까지 가전제품 시장을 확장하고 있습니다. 이 프로젝트에서는 메이디의 새로운 빌트인 오븐 제품의 사용자 시나리오를 구성하고, 이에 맞는 UI 제작을 진행했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-02.png" alt="Midea 로고" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 03 ── -->
+      <section class="detail-block" id="page-03">
+        <div class="detail-text">
+          <p class="detail-eyebrow">As-Is Research</p>
+          <h2>기존 오븐은 실물 이미지 위에 기능을 나열하는 사용 흐름을 갖고 있었습니다</h2>
+            <p>기존에 공급되고 있는 메이디 오븐 제품의 사용 플로우를 분석했습니다. AI와의 상호작용보다는 실물 이미지 기반으로 기능을 나열하는 구조였고, 사용자는 화면에서 원하는 기능을 직접 찾아 선택해야 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-03.png" alt="기존 메이디 오븐 제품의 사용 플로우" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 04 ── -->
+      <section class="detail-block" id="page-04">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Problem Definition</p>
+          <h2>기능 중심의 UI 구조로 시각적 경험의 몰입이 제한되어 있었습니다</h2>
+            <p>분석을 통해 기존 메이디 오븐의 화면 구조가 단순 기능 중심의 UI로 구성되어 있어, 시각적 경험 몰입이 다소 제한되어 보인다는 문제점을 확인했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-04.png" alt="As-Is: Functionality-focused UI, The Immersion of Visual Experience" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 05 ── -->
+      <section class="detail-block" id="page-05">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Brand Asset</p>
+          <h2>다양한 제품에 담긴 비주얼 아이덴티티 ‘아이링’은 이번 제안에서도 유지해야 했습니다</h2>
+            <p>메이디는 아이링(i-Ring)이라는 비주얼 아이덴티티 자산을 다양한 제품에 담아 고객과 소통하고 있었습니다. 이 자산은 진행하는 프로젝트에서도 유지해야 하는 전제였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-05.png" alt="메이디의 비주얼 아이덴티티 아이링" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 06 ── -->
+      <section class="detail-block" id="page-06">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Design Direction</p>
+          <h2>메이디의 비주얼 자산에 식재료 분석·음성 상호작용 같은 AI 기술력을 결합합니다</h2>
+            <p>이러한 제품 배경을 토대로 이번 제안에서는 메이디의 비주얼 자산을 UI에 녹여냄과 동시에, 메이디가 보유한 식재료 분석, 음성 상호작용과 같은 다양한 AI 기술력을 오븐과 결합하는 핵심 변화를 가져가고자 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-06.png" alt="Ai Midea" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 07 ── -->
+      <section class="detail-block" id="page-07">
+        <div class="detail-text">
+          <p class="detail-eyebrow">To-Be Strategy</p>
+          <h2>AI와 결합된 메이디만의 Ring UI로 핵심 기능 간 상호작용 몰입도를 높입니다</h2>
+            <p>To-Be 전략으로 AI와 결합된 메이디만의 Ring UI를 구축하고, 핵심 기능 간의 상호작용 몰입도를 고도화하는 방향을 세웠습니다. 이를 검증할 대표 시나리오로 스테이크를 굽는 그릴 플로우 안에서 발생하는 AI와의 상호작용을 디자인했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-07.png" alt="To Be: Ring UI combined with AI, Enhanced interaction with core features" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 08 ── -->
+      <section class="detail-block" id="page-08">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Concept Proposal</p>
+          <h2>링을 중심으로 AI 사용 방향성이 다른 4가지 시안을 제작했습니다</h2>
+            <p>문제 정의와 전략을 배경으로 링 중심의 4가지 시안을 제작했습니다. 각 시안은 AI 사용 방향성에 따른 사용자 경험 키워드(A type AI Agent, B type Cooking Moment, C type Controller, D type Multiple Experience)에 맞춰 전개되었고, 프로토타입을 기반으로 시안별 플로우를 제안했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-08.mov" poster="images/midea-oven/midea-oven-poster-08.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="링 중심의 4가지 시안 프로토타입"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 09 ── -->
+      <section class="detail-block" id="page-09">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Final Direction</p>
+          <h2>B타입의 플로우와 그라데이션 모션, C타입의 컨트롤러를 병합해 최종안을 정했습니다</h2>
+            <p>메이디 담당자들은 B타입의 사용 플로우와 그라데이션 모션, C타입의 메인 컨트롤러의 사용성과 비주얼을 중심으로 최종 디자인을 원했고, 두 안을 병합하는 방향으로 최종 작업을 진행했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-09.mov" poster="images/midea-oven/midea-oven-poster-09.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="B타입과 C타입을 병합한 최종 방향"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 10 ── -->
+      <section class="detail-block" id="page-10">
+        <div class="detail-text">
+          <p class="detail-eyebrow">AI Image Generation</p>
+          <h2>나노바나나로 UI에 바로 쓸 수 있는 조리 이미지를 빠르게 생성했습니다</h2>
+            <p>2025년 9월경 나노바나나가 화두가 되던 시기였던 만큼, 디자인 작업에 필요한 이미지는 나노바나나로 빠르게 테스트했고 바로 UI에 적용할 수 있을 정도로 높은 퀄리티의 결과물을 얻을 수 있었습니다.</p>
+            <p>프롬프트에는 ‘배경은 검정색’, ‘공중에 배치된’처럼 UI를 구성할 때 편집 과정을 최대한 줄일 수 있는 요소를 포함해 추출했고, 이 과정을 통해 그릴 플로우를 표현하기 위한 이미지 생성을 완료했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-10.png" alt="나노바나나로 생성한 스테이크·오븐 이미지와 프롬프트 목록" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 11 ── -->
+      <section class="detail-block" id="page-11">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Hardware Layout</p>
+          <h2>터치 디스플레이와 양옆 필름 영역의 조화로 화면 영역의 확장성을 확보합니다</h2>
+            <p>하드웨어에서 영역의 사용성을 먼저 정의했습니다. 터치 디스플레이는 가운데에 배치되고, 양옆은 고정된 필름 영역으로 구성됩니다. 필름 영역과 디스플레이 영역 간의 조화를 기반으로 사용자가 더 넓은 화면 영역을 활용할 수 있는 구조를 설계해, 제품 디스플레이 영역의 확장성을 확보하려 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-11.mov" poster="images/midea-oven/midea-oven-poster-11.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="터치 디스플레이와 필름 영역 정의"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 12 ── -->
+      <section class="detail-block" id="page-12">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Home &amp; Scanning</p>
+          <h2>그라데이션 시계 화면에서 시작해, 재료를 넣으면 카메라가 오븐 안을 비춥니다</h2>
+            <p>스테이크를 굽는 그릴 플로우를 중심으로 화면을 소개합니다. 사용자는 가장 먼저 그라데이션 배경과 모션이 결합된 시계 스크린을 마주합니다. 오븐 문을 열고 조리할 재료를 넣으면 카메라가 오븐 안의 모습을 비춰줍니다.</p>
+            <p>메이디는 오븐 안에 들어간 재료가 무엇인지, 익힘이 어느 정도인지 분석하는 기술력을 갖고 있기 때문에, 스캐닝 분석 기술력을 시각적으로 사용자에게 전달하는 것 또한 중요한 부분이었습니다. 영역 오른쪽의 스캐닝 시작 버튼을 터치하면 분석이 시작됩니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-12.mov" poster="images/midea-oven/midea-oven-poster-12.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="시계 화면과 오븐 내부 카메라 화면"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 13 ── -->
+      <section class="detail-block" id="page-13">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · AI Sensing</p>
+          <h2>AI가 음식을 센싱하고 추천 조리 방식과 조리 히스토리를 알려줍니다</h2>
+            <p>메이디의 AI는 오븐에 넣은 음식이 무엇인지 센싱을 시작하고, 추천하는 조리 방식과 조리 히스토리에 대해 알려줍니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-13.mov" poster="images/midea-oven/midea-oven-poster-13.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="AI 센싱과 추천 조리 방식"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 14 ── -->
+      <section class="detail-block" id="page-14">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Ring Motion</p>
+          <h2>센싱 과정의 링을 AI 상호작용의 핵심 비주얼로 정의했습니다</h2>
+            <p>센싱 과정에서 보였던 링은 AI와 사용자가 상호작용할 때 보여지는 AI의 핵심 비주얼로 정의했고, 부드러운 모션을 통해 AI와의 상호작용 몰입도를 높였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-14.mov" poster="images/midea-oven/midea-oven-poster-14.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="AI 링 모션"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 15 ── -->
+      <section class="detail-block" id="page-15">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · New i-Ring</p>
+          <h2>새로운 아이링은 주요 정보·기능과 결합해 다채로운 상호작용을 제공합니다</h2>
+            <p>새로운 아이링은 메이디만의 오븐 아이덴티티를 상징하며, 이어지는 화면에서 주요 정보 및 기능들과 결합하여 다채로운 형태로 기기와의 상호작용 경험을 제공합니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-15.mov" poster="images/midea-oven/midea-oven-poster-15.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="주요 정보와 기능이 결합된 새로운 아이링"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 16 ── -->
+      <section class="detail-block" id="page-16">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Menu Selection</p>
+          <h2>링 가운데 조작부를 터치해 다음 단계로, 스와이프로 메뉴와 굽기를 설정합니다</h2>
+            <p>오븐에 들어간 재료, 즉 스테이크용으로 고른 고기와 센싱된 결과가 맞다면 링의 가운데 조작부를 터치해 다음 스텝을 진행합니다. 고기 종류를 선택하면 그에 맞는 요리 메뉴와 굽기 정도 등을 스와이프 제스처로 설정합니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-16.mov" poster="images/midea-oven/midea-oven-poster-16.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="고기 종류·메뉴·굽기 선택"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 17 ── -->
+      <section class="detail-block" id="page-17">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Settings</p>
+          <h2>모든 항목을 선택하면 세팅 화면이 나타나고, 상세 화면에서 값을 변경할 수 있습니다</h2>
+            <p>모든 항목을 선택하고 나면 선택한 설정에 맞게 세팅된 화면을 볼 수 있습니다. 각각의 세팅 항목은 상세 화면을 통해 값을 변경할 수 있습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-17.mov" poster="images/midea-oven/midea-oven-poster-17.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="세팅 화면과 상세 값 변경"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 18 ── -->
+      <section class="detail-block" id="page-18">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Rotary Control</p>
+          <h2>익숙한 노브 다이얼의 사용성을 터치 환경의 회전 조작으로 이어갑니다</h2>
+            <p>가로로 스와이프하는 방식뿐만 아니라, 가운데 위치한 컨트롤러의 사이드 부분을 회전하는 방법으로도 메뉴와 온도를 조절하고 선택할 수 있습니다.</p>
+            <p>이런 복합적인 사용성을 고민한 이유는 기존 사용자들이 물리적 노브 다이얼을 돌려가며 오븐을 컨트롤해왔기 때문입니다. 노브 다이얼의 사용성을 터치 형식의 전환 흐름에 맞추되, 기존의 익숙한 사용성을 그대로 제공하고자 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-18.mov" poster="images/midea-oven/midea-oven-poster-18.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="컨트롤러 회전 조작"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 19 ── -->
+      <section class="detail-block" id="page-19">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Ring States</p>
+          <h2>상태에 따라 색과 형태가 바뀌는 유기적인 링으로 현재 과정을 직관적으로 전달합니다</h2>
+            <p>링의 컨트롤 사용성에 더해, 다양한 상황에 대응하고 사용자에게 시각적 사인을 전달하는 유기적인 형태의 링 UI 표현을 구현했습니다. 일반적인 상황에서는 메이디의 메인 컬러인 블루를 디폴트로 사용하고, 가열 과정에서는 오렌지 컬러를 사용해 다양한 상태값의 컨트롤러 형태를 제공함으로써 사용자가 어떤 과정에 있는지 직관적으로 이해할 수 있도록 했습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-19.mov" poster="images/midea-oven/midea-oven-poster-19.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="상태값에 따라 변하는 링 UI"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 20 ── -->
+      <section class="detail-block" id="page-20">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Cooking</p>
+          <h2>가장 오래 보게 되는 가열 화면에서도 AI와 상호작용할 수 있음을 계속 보여줍니다</h2>
+            <p>플로우에서 가열 상태는 사용자에게 가장 오랫동안 보여지는 화면입니다. 진행 상태를 보여주는 것은 물론, 그 과정에서 AI와 상호작용이 가능하다는 점을 계속해서 드러내고자 했습니다. 가열 중에 메이디의 AI 이름인 ‘소미’를 부르면 음성 상호작용이 시작됩니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-20.mov" poster="images/midea-oven/midea-oven-poster-20.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="가열 진행 화면"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 21 ── -->
+      <section class="detail-block" id="page-21">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Voice Interaction</p>
+          <h2>음성에 반응하는 AI 링이 등장하고, 인식된 내용은 오른쪽 영역에 표시됩니다</h2>
+            <p>AI 링이 사용자 음성에 반응하는 모션을 보여주며 등장합니다. 목소리로 인식된 내용은 오른쪽 영역에 표시되고, 가열 과정 속에서도 AI와 상호작용하며 조리 과정을 진행할 수 있습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-21.mov" poster="images/midea-oven/midea-oven-poster-21.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="음성에 반응하는 AI 링"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 22 ── -->
+      <section class="detail-block" id="page-22">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Grill Flow · Complete</p>
+          <h2>요리가 완료되면 잔잔한 링 모션으로 조리가 끝났음을 알립니다</h2>
+            <p>이러한 상호작용을 거쳐 요리가 완료되면 잔잔한 링 모션으로 사용자에게 조리가 끝났음을 알리고, 모든 조리가 종료됩니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <video class="detail-video" data-src="images/midea-oven/midea-oven-page-22.mov" poster="images/midea-oven/midea-oven-poster-22.png" width="1920" height="1080" muted loop playsinline preload="none" aria-label="조리 완료 링 모션"></video>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <!-- ── Page 23 ── -->
+      <section class="detail-block" id="page-23">
+        <div class="detail-text">
+          <p class="detail-eyebrow">Closing</p>
+          <h2>처음 진행한 가전 제품 UI, 시나리오 구성부터 영상 프로토타입까지 풀어낸 프로젝트</h2>
+            <p>메이디 프로젝트는 처음으로 진행해본 가전 제품 UI 작업이었습니다. UI의 크기감을 파악하기 위해 실제 사이즈로 인쇄해서 확인해보기도 하고, 제품 사용 시나리오 구성부터 영상 프로토타입 제작까지 진행하며 오븐 사용법을 모르는 사람도 더 쉽게 사용할 수 있도록 많은 고민점을 풀어낸 프로젝트였습니다.</p>
+        </div>
+        <figure class="detail-figure">
+          <div class="detail-figure__frame" style="--ar:1920 / 1080">
+            <div class="detail-figure__clip">
+              <img src="images/midea-oven/midea-oven-page-23.png" alt="그릴 플로우 주요 화면 모음" width="1920" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </figure>
+      </section>
+
+
+      </article>
+    </main>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="site-footer">
+      <div class="site-footer__theme">
+        <button type="button" class="theme-btn" aria-label="테마 전환 버튼" data-theme-toggle>
+          <span class="sr-only">테마를 전환합니다.</span>
+          <span class="theme-btn__icon theme-btn__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+          </span>
+          <span class="theme-btn__icon theme-btn__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z"/></svg>
+          </span>
+        </button>
+      </div>
+      <div class="site-footer__copy">
+        <p>© 2026 Hyebin Lee. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
