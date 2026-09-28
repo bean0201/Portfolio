@@ -1162,24 +1162,33 @@ html.dark .theme-btn__icon--moon { display: inline-flex; }
   }
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 96px 16px;          /* 세로는 캡션(제목 3줄 + 회사명, 최대 약 80px) 자리를 포함 */
-    padding: 0 24px;
+    gap: 28px 8px;           /* 캡션이 카드 흐름 안에 들어오므로 세로 값은 실제 여백 */
+    padding: 0 16px;
     max-width: none;
+    align-items: start;      /* 캡션 줄 수가 달라도 이미지 윗선을 맞춤 */
   }
+  /* 카드 자체는 비율을 풀고 세로 플렉스로: 이미지(4:5) + 캡션이 한 그리드 셀 안에 쌓임 */
   .gallery .card,
   .gallery .card--wide,
   .gallery .card--full,
   .gallery .card:nth-child(4),
-  .gallery .card:nth-child(5) {
-    grid-column: span 1;
-    aspect-ratio: 4 / 5;
-  }
+  .gallery .card:nth-child(5),
   .gallery .card:nth-child(3n + 1),
   .gallery .card:nth-child(3n + 2),
   .gallery .card:nth-child(3n + 3) {
+    grid-column: span 1;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery .card__viewport {
+    position: relative;
+    inset: auto;
+    width: 100%;
     aspect-ratio: 4 / 5;
   }
   .card__caption {
+    position: static;
     margin-top: 10px;
     gap: 0;
   }

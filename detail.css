@@ -460,3 +460,17 @@ html.dark {
     animation: none;
   }
 }
+
+/* ==========================================================================
+   둥근 미디어 변형 (body.detail-page--rounded, 메이디 상세)
+   본문 영상·이미지에 기본 R 20px(모바일 12px). 스크롤 인터랙션 중에는 기존 32px→0 곡선과 합쳐
+   더 큰 값을 사용하므로, 화면 중앙에 오면 기본 R로 안착한다.
+   ========================================================================== */
+.detail-page--rounded .detail-figure__clip {
+  border-radius: max(20px, calc(var(--p) * 32px));
+}
+@media (max-width: 767px) {
+  .detail-page--rounded .detail-figure__clip {
+    border-radius: max(12px, calc(var(--p) * 32px));
+  }
+}
