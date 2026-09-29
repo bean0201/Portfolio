@@ -469,8 +469,16 @@ html.dark {
 .detail-page--rounded .detail-figure__clip {
   border-radius: max(20px, calc(var(--p) * 32px));
 }
+/* 모바일: 크기(여백)·모서리 변화는 없애고, 중앙에 가까워질수록 투명도만 70% → 100% */
 @media (max-width: 767px) {
+  .detail-figure__frame {
+    padding: 24px;
+  }
+  .detail-figure__clip {
+    border-radius: 0;
+    opacity: calc(1 - var(--p, 0) * 0.3);
+  }
   .detail-page--rounded .detail-figure__clip {
-    border-radius: max(12px, calc(var(--p) * 32px));
+    border-radius: 12px;
   }
 }
